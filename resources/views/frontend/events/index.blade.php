@@ -32,7 +32,7 @@
                         tabindex="-1"
                       >
                         <img
-                          src="{{asset('assets/src/event_2/0.jpg')}}"
+                          src="{{asset('assets/src/event_2/main_image/main_image_2.jpg')}}"
                           class="attachment-post-thumbnail size-post-thumbnail wp-post-image"
                           alt="Event 1"
                           decoding="async"
@@ -102,7 +102,7 @@
                       >
                         <img
                           
-                          src="{{asset('assets/src/event_1/1.jpg')}}"
+                          src="{{asset('assets/src/event_1/main_image/main_image_1.jpg')}}"
                           class="attachment-post-thumbnail size-post-thumbnail wp-post-image"
                           alt="If the white whale be raised it must be in a month."
                           decoding="async"
