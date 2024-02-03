@@ -2,7 +2,34 @@
 @extends('temp_layouts/template')
 @section('content')
 @include('frontend.events.events_head_assets')
-
+<style>
+    /* Style for the modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      justify-content: center;
+      align-items: center;
+    }
+    /* Style for the modal content (image) */
+    .modal-content {
+      max-width: 100%;
+      max-height: 100%;
+    }
+    /* Style to close the modal */
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer;
+    }
+</style>
       <div id="content" class="site-content">
         <div class="container">
           <div class="row">
@@ -114,39 +141,144 @@
                                         <div
                                           class="eael-post-grid eael-post-appender eael-post-appender-363e5c0 eael-post-grid-style-three"
                                           data-layout-mode="grid">
-                                          @for($j = 1; $j < 10; $j++ )
+                                          @for ($j = 1; $j < 10; $j++)
                                             @php 
-                                              $folderPath = public_path('assets/src/event_1/activity_'. $j .'');
+                                                $folderPath = public_path('assets/src/event_1/activity_' . $j);
                                             @endphp
-                                              @if(is_dir($folderPath)) 
-                                                  @includeWhen(View::exists('frontend.events.event_1_activity_' . $j), 'frontend.events.event_1_activity_' . $j)
-                                              @endif
 
-                                              @for ($i = 1; $i < 10; $i++)
+                                            @if(is_dir($folderPath)) 
+                                                @includeWhen(View::exists('frontend.events.event_1_activity_' . $j), 'frontend.events.event_1_activity_' . $j)
+                                            @endif
+
+                                            @for ($i = 1; $i < 10; $i++)
                                                 @php
-                                                    $imagePath = 'assets/src/event_1/activity_'.$j.'/'.$i.'.jpg';
+                                                    $imagePath = 'assets/src/event_1/activity_' . $j . '/' . $i . '.jpg';
                                                 @endphp
 
                                                 @if(file_exists(public_path($imagePath)))
-                                                <article class="eael-grid-post eael-post-grid-column" >
-                                                    <div class="eael-grid-post-holder" >
-                                                      <div class="eael-grid-post-holder-inner" >
-                                                        <div class="eael-entry-media">
-                                                          <div class="eael-entry-overlay fade-in"> 
-                                                            <i class="fas fa-plus" aria-hidden="true"></i>
-                                                          </div> 
-                                                          <div class="eael-entry-thumbnail">
-                                                            <img loading="lazy" width="768" height="512" src="{{asset($imagePath)}}" class="attachment-medium_large size-medium_large wp-image-4082"  decoding="async" sizes="(max-width: 768px) 100vw, 768px" />
-                                                          </div>
+                                                    <article class="eael-grid-post eael-post-grid-column">
+                                                        <div class="eael-grid-post-holder">
+                                                            <div class="eael-grid-post-holder-inner">
+                                                                <div class="eael-entry-media">
+                                                                    <div class="eael-entry-thumbnail">
+                                                                        <img loading="lazy" width="768" height="512" onclick="handleImageClick('{{ asset($imagePath) }}')"
+                                                                            src="{{ asset($imagePath) }}" class="attachment-medium_large size-medium_large wp-image-4082" alt="ylo"
+                                                                            sizes="(max-width: 768px) 100vw, 768px" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                      </div>
-                                                    </div>
-                                                  </article>
-                                                  @endif
-                                              @endfor
+                                                    </article>
+                                                @endif
+                                            @endfor
                                           @endfor
-                                            
-                                            
+
+                                          <!-- The Modal -->
+                                          <div id="myModal" class="modal">
+                                              <!-- Modal content (image) -->
+                                              <div class="modal-content">
+                                                  <span class="close" onclick="closeModal()">&times;</span>
+                                                  <img id="modalImage" class="modal-content"  src="" alt="Clicked Image">
+                                              </div>
+                                          </div>
+                                          <style>
+                                              /* The Modal (background) */
+                                              .modal {
+                                                display: none; /* Hidden by default */
+                                                position: fixed; /* Stay in place */
+                                                z-index: 1; /* Sit on top */
+                                                padding-top: 100px; /* Location of the box */
+                                                left: 0;
+                                                top: 0;
+                                                width: 100%; /* Full width */
+                                                height: 100%; /* Full height */
+                                                overflow: auto; /* Enable scroll if needed */
+                                                background-color: rgb(0, 0, 0); /* Fallback color */
+                                                background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+                                              }
+
+                                              /* Modal Content (image) */
+                                              .modal-content {
+                                                margin: auto;
+                                                display: block;
+                                                width: 80%;
+                                                max-width: 700px;
+                                              }
+                                              /* Add Animation */
+                                              .modal-content,
+                                              #caption {
+                                                -webkit-animation-name: zoom;
+                                                -webkit-animation-duration: 0.6s;
+                                                animation-name: zoom;
+                                                animation-duration: 0.6s;
+                                              }
+
+                                              @-webkit-keyframes zoom {
+                                                from {
+                                                  -webkit-transform: scale(0);
+                                                }
+                                                to {
+                                                  -webkit-transform: scale(1);
+                                                }
+                                              }
+
+                                              @keyframes zoom {
+                                                from {
+                                                  transform: scale(0);
+                                                }
+                                                to {
+                                                  transform: scale(1);
+                                                }
+                                              }
+
+                                              /* The Close Button */
+                                              .close {
+                                                position: absolute;
+                                                top: 15px;
+                                                right: 35px;
+                                                color: #f1f1f1;
+                                                font-size: 40px;
+                                                font-weight: bold;
+                                                transition: 0.3s;
+                                              }
+
+                                              .close:hover,
+                                              .close:focus {
+                                                color: #bbb;
+                                                text-decoration: none;
+                                                cursor: pointer;
+                                              }
+
+                                              /* 100% Image Width on Smaller Screens */
+                                              @media only screen and (max-width: 700px) {
+                                                .modal-content {
+                                                  width: 100%;
+                                                }
+                                              }
+                                            </style>
+
+                                          <script>
+                                              // Function to handle image click
+                                              function handleImageClick(imagePath) {
+                                                  var modalImage = document.getElementById('modalImage');
+                                                  modalImage.src = imagePath;
+                                                  document.getElementById('myModal').style.display = 'flex';
+                                              }
+
+                                              // Function to close the modal
+                                              function closeModal() {
+                                                  document.getElementById('myModal').style.display = 'none';
+                                              }
+
+                                              // Close the modal if the user clicks outside the modal content
+                                              window.onclick = function(event) {
+                                                  var modal = document.getElementById('myModal');
+                                                  if (event.target == modal) {
+                                                      modal.style.display = 'none';
+                                                  }
+                                              }
+                                          </script>
+
                                         </div>
                                       </div>
                                     </div>
