@@ -114,28 +114,39 @@
                                         <div
                                           class="eael-post-grid eael-post-appender eael-post-appender-363e5c0 eael-post-grid-style-three"
                                           data-layout-mode="grid">
-                                          @for ($i = 1; $i < 10; $i++)
-                                          @php
-                                              $imagePath = 'assets/src/event_1/activity_1/'.$i.'.jpg';
-                                          @endphp
+                                          @for($j = 1; $j < 10; $j++ )
+                                            @php 
+                                              $folderPath = public_path('assets/src/event_1/activity_'. $j .'');
+                                            @endphp
+                                              @if(is_dir($folderPath)) 
+                                                  @includeWhen(View::exists('frontend.events.event_1_activity_' . $j), 'frontend.events.event_1_activity_' . $j)
+                                              @endif
 
-                                          @if(file_exists(public_path($imagePath)))
-                                          <article class="eael-grid-post eael-post-grid-column" >
-                                              <div class="eael-grid-post-holder" >
-                                                <div class="eael-grid-post-holder-inner" >
-                                                  <div class="eael-entry-media">
-                                                    <div class="eael-entry-overlay fade-in"> 
-                                                      <i class="fas fa-plus" aria-hidden="true"></i>
-                                                    </div> 
-                                                    <div class="eael-entry-thumbnail">
-                                                      <img loading="lazy" width="768" height="512" src="{{asset($imagePath)}}" class="attachment-medium_large size-medium_large wp-image-4082"  decoding="async" sizes="(max-width: 768px) 100vw, 768px" />
+                                              @for ($i = 1; $i < 10; $i++)
+                                                @php
+                                                    $imagePath = 'assets/src/event_1/activity_'.$j.'/'.$i.'.jpg';
+                                                @endphp
+
+                                                @if(file_exists(public_path($imagePath)))
+                                                <article class="eael-grid-post eael-post-grid-column" >
+                                                    <div class="eael-grid-post-holder" >
+                                                      <div class="eael-grid-post-holder-inner" >
+                                                        <div class="eael-entry-media">
+                                                          <div class="eael-entry-overlay fade-in"> 
+                                                            <i class="fas fa-plus" aria-hidden="true"></i>
+                                                          </div> 
+                                                          <div class="eael-entry-thumbnail">
+                                                            <img loading="lazy" width="768" height="512" src="{{asset($imagePath)}}" class="attachment-medium_large size-medium_large wp-image-4082"  decoding="async" sizes="(max-width: 768px) 100vw, 768px" />
+                                                          </div>
+                                                        </div>
+                                                      </div>
                                                     </div>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </article>
-                                            @endif
+                                                  </article>
+                                                  @endif
+                                              @endfor
                                           @endfor
+                                            
+                                            
                                         </div>
                                       </div>
                                     </div>
