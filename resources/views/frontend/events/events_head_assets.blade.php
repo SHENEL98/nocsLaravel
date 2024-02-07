@@ -174,7 +174,7 @@
     }
   </style>
   <link rel="stylesheet" id="wp-block-library-css"
-    href="{{asset('assets/frontend/js/wp-includes/css/dist/block-library/style.mine35d.css?ver=6.3.2')}}" type="text/css" media="all" />
+    href="{{asset('assets/frontend/js/wp-includes/css/dist/block-library/style.mine35b.css?ver=6.3.2')}}" type="text/css" media="all" />
   <style id="classic-theme-styles-inline-css" type="text/css">
     /*! This file is auto-generated */
     .wp-block-button__link {
@@ -600,7 +600,7 @@
     href="{{asset('assets/frontend/content/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.mind618.css?ver=5.21.0')}}"
     type="text/css" media="all" />
   <link rel="stylesheet" id="elementor-frontend-css"
-    href="{{asset('assets/frontend/content/wp-content/plugins/elementor/assets/css/frontend-lite.min6319.css?ver=3.15.2')}}" type="text/css"
+    href="{{asset('assets/frontend/content/wp-content/plugins/elementor/assets/css/frontend-lite.min6369.css?ver=3.15.2')}}" type="text/css"
     media="all" />
   <link rel="stylesheet" id="swiper-css"
     href="{{asset('assets/frontend/content/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min94a4.css?ver=8.4.5')}}" type="text/css"

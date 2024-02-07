@@ -218,7 +218,7 @@
                                             </section>
                                         </div>
                                     </section>
-                                </div>
+                               ` </div>
                             </div>
                             <!-- .entry-content -->
                         </article>
@@ -229,6 +229,6 @@
                 <!-- #primary .content-area -->
             </div>
         </div>
-    </div>
+    </div>`
 
 @endsection

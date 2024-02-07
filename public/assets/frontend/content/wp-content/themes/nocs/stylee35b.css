@@ -835,7 +835,7 @@ blockquote:after,
  * Fluid images for posts, comments, and widgets
  */
 .entry-content img, .entry-summary img, .comment-content img, .widget img, .wp-caption {
-	/*max-width: 100%;*/
+	max-width: 100%;
 	height: auto;
 }
 /* Make sure images with WordPress-added height and width attributes are scaled correctly. */
