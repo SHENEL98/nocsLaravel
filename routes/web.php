@@ -23,6 +23,10 @@ Route::get('/Events',[FrontController::class,'events']);
 Route::get('/7QUESTS',[FrontController::class,'event_1']);
 Route::get('/HaloNight',[FrontController::class,'event_2']);
 
+
+Route::get('/test',[FrontController::class,'test']);
+
+
 /*Route::get('/', function () {
     return view('welcome');
 });

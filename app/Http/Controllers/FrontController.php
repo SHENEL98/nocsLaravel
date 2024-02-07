@@ -26,4 +26,8 @@ class FrontController extends Controller
     public function event_2(): View {
         return view('frontend/events/event_2');
     }
+
+    public function test(): View {
+        return view('frontend/test');
+    }
 }
