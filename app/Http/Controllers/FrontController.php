@@ -16,6 +16,11 @@ class FrontController extends Controller
         return view('frontend/aboutus/index');
     }
 
+    public function contactus(): View {
+        return view('frontend/contactus/index');
+    }
+
+
     public function events(): View {
         return view('frontend/events/index');
     }

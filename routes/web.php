@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[FrontController::class, 'index']);
 Route::get('/AboutUs',[FrontController::class,'aboutus']);
+Route::get('/ContactUs',[FrontController::class,'contactus']);
 
 Route::get('/Events',[FrontController::class,'events']);
 Route::get('/7QUESTS',[FrontController::class,'event_1']);
