@@ -23,7 +23,7 @@ Route::get('/ContactUs',[FrontController::class,'contactus']);
 Route::get('/Events',[FrontController::class,'events']);
 Route::get('/7QUESTS',[FrontController::class,'event_1']);
 Route::get('/HaloNight',[FrontController::class,'event_2']);
-
+Route::get('/Orientation',[FrontController::class,'orientation']);
 
 Route::get('/test',[FrontController::class,'test']);
 

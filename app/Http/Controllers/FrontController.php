@@ -35,4 +35,7 @@ class FrontController extends Controller
     public function test(): View {
         return view('frontend/test');
     }
+    public function Orientation():View{
+        return view('frontend/orientation/index');
+    }
 }
