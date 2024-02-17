@@ -4,12 +4,19 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\View\View;
+use Carbon\Carbon;
 
 class FrontController extends Controller
 {
     public function index(): View {
         //return view('temp_layouts.template');
-        return view('frontend/index/index');
+        //return view('frontend/index/index');
+        
+        $currentDateTime = Carbon::now();
+        $launchDateTime = Carbon::create(2024, 2, 17, 15, 46, 0); // Target launch date and time
+        $timeRemaining = $launchDateTime->diffInSeconds($currentDateTime);
+
+        return view('frontend.index.index', compact('timeRemaining'));
     }
 
     public function aboutus(): View {

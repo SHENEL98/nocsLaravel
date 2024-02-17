@@ -290,15 +290,24 @@
                                   <div class="slideshow-container">
                                     <!-- Slides -->
                                     <div class="mySlides">
-                                      <img src="{{asset('assets/src/event_1/1.jpg')}}" alt="Slide 1">
+                                      <img style="opacity: 0.5;" src="{{asset('assets/src/event_1/activity_1/1.jpg')}}"  class="d-block w-100" alt="Slide 1">
+                                      <div class="carousel-caption d-none d-md-block">
+                                        <p style="color: black;" >"Review 1 - some representative placeholder content for the first slide."</p>
+                                      </div>
                                     </div>
                                   
                                     <div class="mySlides">
-                                      <img src="{{asset('assets/src/event_1/2.jpg')}}" alt="Slide 2">
+                                      <img style="opacity: 0.5;"  src="{{asset('assets/src/event_1/activity_1/2.jpg')}}" class="d-block w-100" alt="Slide 2">
+                                      <div class="carousel-caption d-none d-md-block">
+                                        <p style="color: black;">"Review 2 - some representative placeholder content for the second slide."</p>
+                                      </div>
                                     </div>
                                   
                                     <div class="mySlides">
-                                      <img src="{{asset('assets/src/event_1/3.jpg')}}" alt="Slide 3">
+                                      <img style="opacity: 0.5;"  src="{{asset('assets/src/event_1/activity_1/3.jpg')}}" class="d-block w-100" alt="Slide 3">
+                                      <div class="carousel-caption d-none d-md-block">
+                                        <p style="color: black;">"Review 3 - some representative placeholder content for the third slide."</p>
+                                      </div>
                                     </div>
                                   
                                     <!-- Navigation dots -->
