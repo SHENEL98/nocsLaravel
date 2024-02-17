@@ -1,109 +1,8 @@
-<!DOCTYPE html>
-<html lang="en-US" class="no-js">
-  <!-- Mirrored from themetechmount.com/ttm-business/free/demo28/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 27 Dec 2023 21:13:21 GMT -->
-  <!-- Added by HTTrack --><meta
-    http-equiv="content-type"
-    content="text/html;charset=UTF-8"
-  /><!-- /Added by HTTrack -->
-  <head>
-      @include('temp_layouts/head')
-  </head>
-  <style>
-    .banner-container {
-      overflow: hidden;
-      background-color: #00d9ff;
-    }
-
-    .scrolling-banner {
-      white-space: nowrap;
-      animation: scrollBanner 10s linear infinite;
-    }
-
-    @keyframes scrollBanner {
-      0% {
-        transform: translateX(100%);
-      }
-      100% {
-        transform: translateX(-100%);
-      }
-    }
-  </style>
-<body>
-<script>
-  // Set the date we're counting down to
-  var countDownDate = new Date("Feb 17, 2024 23:41:20").getTime();
-
-  // Update the countdown every second
-  var countdown = setInterval(function() {
-    // Get the current date and time
-    var now = new Date().getTime();
-
-    // Find the distance between now and the countdown date
-    var distance = countDownDate - now;
-
-    // Calculate days, hours, minutes and seconds
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    // Display the countdown
-    document.getElementById("countdown").innerHTML = days + "d " + hours + "h " +
-      minutes + "m " + seconds + "s ";
-
-    // If the countdown is over, display a message
-    if (distance < 0) {
-      clearInterval(countdown);
-      document.getElementById("till-countdown").style.display = "none";
-      document.getElementById("after-countdown").style.display = "block";
-    } 
-  }, 1000);
-</script>
-  <div id="till-countdown" style=" font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;">
-     <style>
-      .countdown-container {
-        text-align: center;
-      }
-
-      .countdown {
-        font-size: 40px;
-        color: #333;
-        margin-bottom: 20px;
-      }
-
-      .countdown-label {
-        font-size: 20px;
-        color: #555;
-      }
-    </style>
-    <div class="countdown-container">
-      <div id="countdown" class="countdown"></div>
-      <div class="countdown-label">Until the event starts</div>
-    </div>
-  </div>
-  <div id ="after-countdown" style="display:none">
-   <main
-    class="home page-template-default page page-id-2220 tm-header-layout-3 elementor-default elementor-kit-3 elementor-page elementor-page-2220">
-    <div class="main-holder">
-      <div id="page" class="hfeed site">
-        <header
-          id="masthead"
-          class="site-header-container header-layout-3 prt-header-menu-position-center"
-        >
-          @include('temp_layouts/header')
-        </header>
-
-        <!-- template body -->
-        @include('frontend/index/assets')
+@extends('temp_layouts/template')
+    @section('content')
+      @include('frontend/index/assets')
       <div id="content" class="site-content">
-         
+        <div class="container">
           <div class="row">
             <div id="primary" class="content-area col-sm-12 col-md-12 col-lg-12 col-xl-12">
               <main id="main" class="site-main">
@@ -588,22 +487,6 @@
             </div>
             <!-- #primary .content-area -->
           </div>
-      
+        </div>
       </div>
-        <!-- end template body -->
-        
-        <!-- .site-content -->
-        <footer id="colophon" class="site-footer">
-          @include('temp_layouts/footer')
-        </footer>
-        <!-- .site-footer -->
-      </div>
-      <!-- #page -->
-    </div>
-
-   </main>
-  </div>
-</body>
-
-
-</html>
+    @endsection

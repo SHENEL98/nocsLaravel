@@ -13,10 +13,12 @@ class FrontController extends Controller
         //return view('frontend/index/index');
         
         $currentDateTime = Carbon::now();
-        $launchDateTime = Carbon::create(2024, 2, 17, 15, 46, 0); // Target launch date and time
+        $launchDateTime = Carbon::create(2024, 2, 17, 17, 05, 0); // Target launch date and time
         $timeRemaining = $launchDateTime->diffInSeconds($currentDateTime);
 
-        return view('frontend.index.index', compact('timeRemaining'));
+        //dd($currentDateTime);
+
+        return view('frontend.index.index', compact('timeRemaining','launchDateTime'));
     }
 
     public function aboutus(): View {
