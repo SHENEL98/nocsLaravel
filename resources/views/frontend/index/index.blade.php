@@ -27,11 +27,21 @@
         transform: translateX(-100%);
       }
     }
+    canvas#confetti {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        z-index: 1000;
+        pointer-events: none;
+      }
   </style>
 <body>
+<script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
 <script>
   // Set the date we're counting down to
-  var countDownDate = new Date("Feb 17, 2024 23:41:20").getTime();
+  var countDownDate = new Date("Feb 18, 2024 12:59:50").getTime();
 
   // Update the countdown every second
   var countdown = setInterval(function() {
@@ -56,6 +66,12 @@
       clearInterval(countdown);
       document.getElementById("till-countdown").style.display = "none";
       document.getElementById("after-countdown").style.display = "block";
+      // Trigger confetti animation
+      const canvas = document.querySelector('#confetti');
+      const jsConfetti = new JSConfetti();
+      jsConfetti.addConfetti({
+        emojis: ['🥳','🎉', '🪅', '💥', '✨', '💫', '🎉'],
+      }).then(() => jsConfetti.addConfetti());
     } 
   }, 1000);
 </script>
@@ -88,6 +104,7 @@
       <div class="countdown-label">Until the event starts</div>
     </div>
   </div>
+  <canvas id="confetti"></canvas>
   <div id ="after-countdown" style="display:none">
    <main
     class="home page-template-default page page-id-2220 tm-header-layout-3 elementor-default elementor-kit-3 elementor-page elementor-page-2220">

@@ -229,9 +229,11 @@
                                                                             @for ($j = 1; $j < 10; $j++) @php $folderPath=public_path('assets/src/event_2/activity_' . $j); @endphp @if(is_dir($folderPath)) @includeWhen(View::exists('frontend.events.event_2_activity_' . $j), 'frontend.events.event_2_activity_' . $j) <div class="container_slider">
                                                                                 <div class="slider_wrapper">
                                                                                     <ul class="image_list">
-                                                                                        @for($i = 1; $i < 10; $i++) @php $imagePath='assets/src/event_2/activity_' . $j .'/' . $i . '.jpg' ; @endphp @if(file_exists(public_path($imagePath))) <img class="image_item" src="{{ asset($imagePath) }}" onclick="handleImageClick('{{ asset($imagePath) }}')" alt="Image {{ $i }}">
-                                                                                            @endif
-                                                                                            @endfor
+                                                                                        @for($i = 1; $i < 10; $i++) @php $imagePath='assets/src/event_2/activity_' . $j .'/' . $i . '.jpg' ; @endphp 
+                                                                                        @if(file_exists(public_path($imagePath))) 
+                                                                                            <img class="image_item" src="{{ asset($imagePath) }}" onclick="handleImageClick('{{ asset($imagePath) }}')" alt="Image {{ $i }}">
+                                                                                        @endif
+                                                                                        @endfor
                                                                                     </ul>
                                                                                     <div class="slide_buttons">
                                                                                         <button class="slide_button material-symbols-rounded" onclick="scrollImages({{ $j }}, -1)">&#10094;</button>
