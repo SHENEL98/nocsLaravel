@@ -45,7 +45,7 @@
 <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
 <script>
   // Set the date we're counting down to
-  var countDownDate = new Date("Feb 24, 2024 21:31:20").getTime();
+  var countDownDate = new Date("Apr 25, 2024 10:30:20").getTime();
 
   var days;
   var hours;
@@ -177,7 +177,7 @@
 
     <div style="visibility: hidden;"  id="countdown" class="countdown"></div>
     <div style="visibility: hidden;" class="countdown-label">Until the event starts</div>
-    <ul id="till-countdown" style="line-height: 53px;">
+    <ul id="till-countdown" style="line-height: 65px;">
       <li id="days">
         <div class="number">00</div>
         <div class="label">Days</div>
