@@ -45,7 +45,7 @@
 <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
 <script>
   // Set the date we're counting down to
-  var countDownDate = new Date("Apr 25, 2024 10:30:20").getTime();
+  var countDownDate = new Date("Mar 09, 2024 10:20:50").getTime();
 
   var days;
   var hours;
@@ -324,9 +324,11 @@
                               <div class="elementor-element elementor-element-cef8c0a elementor-widget elementor-widget-heading" data-id="cef8c0a" data-element_type="widget" data-widget_type="heading.default">
                                 <div class="elementor-widget-container">
                                   <h3 class="elementor-heading-title elementor-size-default">
-                                    We aim to improve different shades of our society.
-                                    Are you ready to be part of the change ?
+                                    <strong> We aim to improve different shades of our society. </strong>
                                   </h3>
+                                  <h5 class="elementor-heading-title ">
+                                    Are you ready to be part of the change ?
+                                  </h5>
                                 </div>
                               </div>
                               <div class="elementor-element elementor-element-7063153 elementor-widget elementor-widget-text-editor" data-id="7063153" data-element_type="widget" data-widget_type="text-editor.default">

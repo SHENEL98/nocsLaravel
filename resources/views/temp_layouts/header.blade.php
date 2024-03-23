@@ -68,7 +68,7 @@
             </div>
             <div class="banner-container">
               <div class="scrolling-banner">
-                <p>This is a horizontal scrolling banner!</p>
+                <p>See you all on <strong> April 25</strong> !</p>
               </div>
             </div>
           </div>
