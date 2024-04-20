@@ -123,7 +123,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="row" style="margin: 0; padding: 0;">
-                                                            @for($i = 1; $i < 10; $i++) @php $imagePath='assets/src/event_1/' . $i . '.jpg' ; @endphp @if(file_exists(public_path($imagePath))) <div class="col-3" style="padding: 0;">
+                                                            @for($i = 1; $i < 10; $i++) @php $imagePath='assets/src/event_2/' . $i . '.jpg' ; @endphp @if(file_exists(public_path($imagePath))) <div class="col-3" style="padding: 0;">
 
                                                                 <img class="col-12" style="padding: 0;" src="{{ asset($imagePath) }}" onclick="handleImageClick('{{ asset($imagePath) }}')" alt="Image {{ $i }}">
                                                         </div>
