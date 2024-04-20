@@ -122,144 +122,15 @@
                                                                 </h6>
                                                             </div>
                                                         </div>
-                                                        <div class="elementor-element elementor-element-363e5c0 elementor-grid-eael-col-3 elementor-grid-tablet-eael-col-2 elementor-grid-mobile-eael-col-1 elementor-invisible elementor-widget elementor-widget-eael-post-grid" data-id="363e5c0" data-element_type="widget" data-settings='{"eael_post_grid_columns":"eael-col-3","_animation":"fadeInUp","eael_post_grid_columns_tablet":"eael-col-2","eael_post_grid_columns_mobile":"eael-col-1"}' data-widget_type="eael-post-grid.default">
-                                                            <div class="elementor-widget-container">
-                                                                <div id="eael-post-grid-363e5c0" class="eael-post-grid-container">
-                                                                    <div class="eael-post-grid eael-post-appender eael-post-appender-363e5c0 eael-post-grid-style-three" data-layout-mode="grid">
+                                                        <div class="row" style="margin: 0; padding: 0;">
+                                                            @for($i = 1; $i < 10; $i++) @php $imagePath='assets/src/event_1/' . $i . '.jpg' ; @endphp @if(file_exists(public_path($imagePath))) <div class="col-3" style="padding: 0;">
 
-                                                                        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
-                                                                        <link rel="stylesheet" href="style.css" />
-                                                                        <script src="script.js" defer></script>
-                                                                        <style>
-                                                                            .con_body {
-                                                                                display: flex;
-                                                                                flex-direction: column;
-                                                                                align-items: center;
-                                                                                justify-content: center;
-                                                                                min-height: 100vh;
-                                                                                background: #f1f4fd;
-                                                                            }
-
-                                                                            .container_slider {
-                                                                                position: relative;
-                                                                                max-width: 1200px;
-                                                                                width: 95%;
-                                                                            }
-
-                                                                            .slider_wrapper {
-                                                                                position: relative;
-                                                                                overflow: hidden;
-                                                                                /* Ensure the image list is contained within the wrapper */
-                                                                            }
-
-                                                                            .image_list {
-                                                                                display: flex;
-                                                                                /* Make the image list a flex container */
-                                                                                overflow-x: auto;
-                                                                                /* Enable horizontal scrolling */
-                                                                                scroll-behavior: smooth;
-                                                                                /* Smooth scrolling */
-                                                                                align-items: center;
-                                                                                /* Center align images */
-                                                                            }
-
-                                                                            .image_item {
-                                                                                flex: 0 0 auto;
-                                                                                /* Prevent images from shrinking or growing */
-                                                                                width: 325px;
-                                                                                /* Adjust as needed */
-                                                                                height: 400px;
-                                                                                /* Adjust as needed */
-                                                                                object-fit: cover;
-                                                                                /* Maintain aspect ratio */
-                                                                            }
-
-                                                                            .slide_buttons {
-                                                                                position: absolute;
-                                                                                top: 50%;
-                                                                                display: flex;
-                                                                                align-items: center;
-                                                                                justify-content: space-between;
-                                                                                /* Add space between buttons */
-                                                                                width: 100%;
-                                                                                /* Ensure buttons span the entire width */
-                                                                                transform: translateY(-50%);
-                                                                                /* Center vertically */
-                                                                                z-index: 1;
-                                                                                /* Ensure buttons appear above images */
-                                                                            }
-
-                                                                            #prev-slide,
-                                                                            #next-slide {
-                                                                                background-color: rgba(0, 0, 0, 0.5);
-                                                                                color: #fff;
-                                                                                border: none;
-                                                                                padding: 10px;
-                                                                                cursor: pointer;
-                                                                            }
-
-                                                                            .slide_buttons {
-                                                                                position: absolute;
-                                                                                top: 50%;
-                                                                                transform: translateY(-50%);
-                                                                                display: flex;
-                                                                                align-items: center;
-                                                                                justify-content: space-between;
-                                                                                /* Adjust button spacing */
-                                                                                width: calc(100% - 20px);
-                                                                                /* Adjust button spacing */
-                                                                                padding: 0 10px;
-                                                                                /* Adjust button spacing */
-                                                                                z-index: 1;
-                                                                            }
-
-                                                                            .slide_button {
-                                                                                background-color: rgba(0, 0, 0, 0.5);
-                                                                                color: #fff;
-                                                                                border: none;
-                                                                                padding: 10px;
-                                                                                cursor: pointer;
-                                                                                margin: 0;
-                                                                                /* Remove margin */
-                                                                            }
-                                                                        </style>
-
-
-                                                                        <div class="con_body">
-                                                                            @for ($j = 1; $j < 10; $j++) @php $folderPath=public_path('assets/src/event_2/activity_' . $j); @endphp @if(is_dir($folderPath)) @includeWhen(View::exists('frontend.events.event_2_activity_' . $j), 'frontend.events.event_2_activity_' . $j) <div class="container_slider">
-                                                                                <div class="slider_wrapper">
-                                                                                    <ul class="image_list">
-                                                                                        @for($i = 1; $i < 10; $i++) @php $imagePath='assets/src/event_2/activity_' . $j .'/' . $i . '.jpg' ; @endphp 
-                                                                                        @if(file_exists(public_path($imagePath))) 
-                                                                                            <img class="image_item" src="{{ asset($imagePath) }}" onclick="handleImageClick('{{ asset($imagePath) }}')" alt="Image {{ $i }}">
-                                                                                        @endif
-                                                                                        @endfor
-                                                                                    </ul>
-                                                                                    <div class="slide_buttons">
-                                                                                        <button class="slide_button material-symbols-rounded" onclick="scrollImages({{ $j }}, -1)">&#10094;</button>
-                                                                                        <button class="slide_button material-symbols-rounded" onclick="scrollImages({{ $j }}, 1)">&#10095;</button>
-                                                                                    </div>
-                                                                                </div>
-                                                                        </div>
-                                                                        @endif
-                                                                        @endfor
-                                                                    </div>
-
-                                                                    <script>
-                                                                        function scrollImages(sliderIndex, direction) {
-                                                                            const sliderWrapper = document.querySelectorAll(".slider_wrapper")[sliderIndex - 1];
-                                                                            const imageList = sliderWrapper.querySelector(".image_list");
-                                                                            const scrollAmount = 325 * direction;
-                                                                            imageList.scrollBy({
-                                                                                left: scrollAmount,
-                                                                                behavior: "smooth"
-                                                                            });
-                                                                        }
-                                                                    </script> 
-                                                                    @include('frontend.events.event_modal')
-                                                                </div>
-                                                            </div>
+                                                                <img class="col-12" style="padding: 0;" src="{{ asset($imagePath) }}" onclick="handleImageClick('{{ asset($imagePath) }}')" alt="Image {{ $i }}">
                                                         </div>
+                                                        @endif
+                                                        @endfor
+                                                    </div>
+                                                    @include('frontend.events.event_modal')
                                                     </div>
                                                 </div>
                                             </div>
