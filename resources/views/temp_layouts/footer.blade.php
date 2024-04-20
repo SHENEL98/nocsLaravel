@@ -1,7 +1,7 @@
 <div class="ttm-business-footer-widgets-wrapper">
             <div class="container">
               <div class="ttm-business-footer row">
-                <div class="widget-area col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                <div class="widget-area col-xl-4 col-lg-4 col-md-6 col-sm-12">
                   <section
                     id="custom_html-1"
                     class="widget_text widget widget_custom_html"
@@ -13,7 +13,7 @@
                     </div>
                   </section>
                 </div>
-                <div class="widget-area col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                <!-- <div class="widget-area col-xl-3 col-lg-3 col-md-6 col-sm-12">
                   <section id="nav_menu-1" class="widget widget_nav_menu">
                     <h2 class="widget-title">Service</h2>
                     <div class="menu-services-container">
@@ -51,8 +51,8 @@
                       </ul>
                     </div>
                   </section>
-                </div>
-                <div class="widget-area col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                </div>-->
+                <div class="widget-area col-xl-4 col-lg-4 col-md-6 col-sm-12">
                   <section id="nav_menu-2" class="widget widget_nav_menu">
                     <h2 class="widget-title">Social</h2>
                     <div class="menu-social-container">
@@ -83,14 +83,14 @@
                     </div>
                   </section>
                 </div>
-                <div class="widget-area col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                <div class="widget-area col-xl-4 col-lg-4 col-md-6 col-sm-12">
                   <section id="text-1" class="widget widget_text">
                     <h2 class="widget-title">Our Location</h2>
                     <div class="textwidget">
                       <p>
                         Verona, Italy
                       </p>
-                      <p><a href="contact_us.html">Contact us</a></p>
+                      <p><a href="/ContactUs">Contact us</a></p>
                     </div>
                   </section>
                 </div>
@@ -106,7 +106,7 @@
                 <div
                 class="col-xs-12 col-sm-12 prt-center-text prt-footer2-left"
                 >
-                Copyright © 2023
+                Copyright © 2024
                 Developed by
                 <a href="https://www.linkedin.com/in/shenel-anuththara-a86865172/" target="_blank"
                   >Shenel Kurera</a

@@ -9,7 +9,7 @@
       @include('temp_layouts/head')
   </head>
   <style>
-    .banner-container {
+    /*.banner-container {
       overflow: hidden;
       background-color: #00d9ff;
     }
@@ -26,7 +26,7 @@
       100% {
         transform: translateX(-100%);
       }
-    }
+    } */
     canvas#confetti {
         position: fixed;
         width: 100%;

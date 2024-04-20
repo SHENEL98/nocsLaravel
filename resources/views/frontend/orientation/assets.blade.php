@@ -564,7 +564,7 @@
       .site-header .main-navigation div > ul > li > a {
         font-family: Poppins;
         font-weight: 400;
-        font-size: 15px;
+        font-size: 17px;
         line-height: 25px;
         color: #ffffff;
         letter-spacing: 0px;
