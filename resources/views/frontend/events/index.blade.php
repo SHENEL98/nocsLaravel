@@ -69,12 +69,12 @@
                     <section class="elementor-section elementor-top-section elementor-element elementor-element-85cb8c4 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default" dFata-id="85cb8c4" data-element_type="section" data-settings='{"stretch_section":"section-stretched","background_background":"classic"}'>
                       <article class="post-974 post type-post status-publish format-standard has-post-thumbnail hentry category-marketing">
                         <div class="ttm-business-blog-classic row">
-                          <div class="col-9">
+                          <div class="col-sm-12 col-md-9 col-lg-9 col-xl-9">
                             <a class="post-thumbnail" aria-hidden="true" tabindex="-1" href="/HaloNight">
                               <img src="{{asset('assets/src/event_2/main_image/main_image_2.jpg')}}" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Event 1" decoding="async" fetchpriority="high" sizes="(max-width: 1200px) 100vw, 1200px" />
                             </a>
                           </div>
-                          <div class="col-3">
+                          <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
                             <div class="ttm-business-blog-content">
                               <header class="entry-header">
                                 <h2 class="entry-title">
@@ -107,12 +107,12 @@
                       </article>
                       <article class="post-974 post type-post status-publish format-standard has-post-thumbnail hentry category-marketing">
                         <div class="ttm-business-blog-classic row">
-                          <div class="col-9">
+                          <div class="col-sm-12 col-md-9 col-lg-9 col-xl-9">
                             <a class="post-thumbnail" aria-hidden="true" tabindex="-1" href="/7QUESTS">
                               <img src="{{asset('assets/src/event_1/main_image/main_image_1.jpg')}}" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Event 1" decoding="async" fetchpriority="high" sizes="(max-width: 1200px) 100vw, 1200px" />
                             </a>
                           </div>
-                          <div class="col-3">
+                          <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
                             <div class="ttm-business-blog-content">
                               <header class="entry-header">
                                 <h2 class="entry-title">

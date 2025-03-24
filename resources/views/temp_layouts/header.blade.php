@@ -24,9 +24,9 @@
             <li id="menu-item-2530" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2530">
               <a href="/AboutUs">About Us</a>
             </li>
-            <li id="menu-item-2550" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2550">
+           <!-- <li id="menu-item-2550" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2550">
               <a href="/Orientation">Orientation</a>
-            </li>
+            </li>-->
             <li id="menu-item-3017" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3017">
               <a href="/ContactUs">Contact Us</a>
             </li>
@@ -37,7 +37,7 @@
       <div id="site-navigation-mobile"></div>
     </div>
   </div>
-  <div class="scrolling-banners">
+ <!-- <div class="scrolling-banners">
   <div class="scrolling-banner">
     <p>See you all on <strong> April 25</strong> !</p>
   </div>
@@ -47,7 +47,7 @@
   <div class="scrolling-banner">
     <p>See you all on <strong> April 25</strong> !</p>
   </div>
-</div>
+</div> -->
 
 </div>
 
